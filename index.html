@@ -29,13 +29,13 @@
 
     <div class="pol">
       <p class="blue">Главная страница</p>
-      <p>Айди</p>
-     <input type="text" id="id" placeholder="Id"><br>
      <p>Придумай Никнейм</p>
      <input type="text" id="nickname" placeholder="Nickname"><br>
+     <p>Rollbox</p>
+     <input type="text" id="rollbox" placeholder="Rollbox"><br>
       <p>придумай пароль</p>
       <input type="text" id="password" placeholder="Password"><br>
-      <button id = "addbutton">Создать аккаунт</button>
+      <button id = "insert">Создать аккаунт</button>
     </div>
     <style>
       .pol {
@@ -65,18 +65,12 @@
 
 
     <!--база данных firebase-->
-
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
-
-    <script>
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    <script id='MainScript'>
+      
       var firebaseConfig = {
         apiKey: "AIzaSyCturT2bd0DyL6dnP67npvLhqktJ0ECL4Q",
         authDomain: "dvuti-7ede1.firebaseapp.com",
@@ -87,20 +81,28 @@
         appId: "1:27719067783:web:89fab657d78300bb577022",
         measurementId: "G-ZRHD3011G9"
       };
-      // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
+
+var nameV, passV;
+
+function Ready() {
+  nameV = dicument.getElementById('nickname').value;
+  passV = document.getElementById('password').value;
+  rollV = document.getElementById('rollbox').value;
+}
+
+
+document.getElementById('insert').onclick = function(){
+  Ready();
+  firebase.database().ref('accounts/'+rollV).set({
+    NicknameOfAccount: nameV,
+    passwordOfAccount: passV
+    RollNo: rollV
+  });
+}
     </script>
 
-    <script>
-      var database = firebase.database();
 
-      function writeUserData(userId, name, email, imageUrl) {
-        firebase.database().ref('users/' + userId).set({
-         username: "name",
-         email: "email",
-        });
-      }
-    </script>
   </body>
 </html>
