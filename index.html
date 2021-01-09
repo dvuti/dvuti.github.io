@@ -84,23 +84,22 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
 
-var nameV, passV;
+      var nameV, passV;
 
-function Ready() {
-  nameV = dicument.getElementById('nickname').value;
-  passV = document.getElementById('password').value;
-  rollV = document.getElementById('rollbox').value;
-}
+      function Ready() {
+        nameV = dicument.getElementById('nickname').value;
+        passV = document.getElementById('password').value;
+        rollV = document.getElementById('rollbox').value;
+      }
 
-
-document.getElementById('insert').onclick = function(){
-  Ready();
-  firebase.database().ref('accounts/'+rollV).set({
-    NicknameOfAccount: nameV,
-    passwordOfAccount: passV
-    RollNo: rollV
-  });
-}
+      document.getElementById('insert').onclick = function(){
+        Ready();
+        firebase.database().ref('accounts/'+rollV).set({
+          NicknameOfAccount: nameV,
+          passwordOfAccount: passV
+          RollNo: rollV
+        });
+      }
     </script>
 
 
