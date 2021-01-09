@@ -36,6 +36,7 @@
       <p>придумай пароль</p>
       <input type="text" id="passbox" placeholder="Password"><br>
       <button id = "insert">Создать аккаунт</button>
+      <button id = "Vhod">Войти в аккаунт</button>
     </div>
     <style>
       .pol {
@@ -72,7 +73,7 @@
       };
       firebase.initializeApp(firebaseConfig);
 
-      var nameV, passV, rollV;
+      var nameV, passV, rollV, password;
 
       function Ready(){
         nameV = document.getElementById('nickbox').value;
@@ -88,6 +89,24 @@
           NamberOfAccount: rollV
         });
       }
+      
+       document.getElementById('Vhod').onclick = function(){
+        Ready();
+        firebase.database().ref('accounts/'+rollV).on('value', function(snapshot){
+          document.getElementById('nickbox').value= snapshot.val().NickNameOfAccount;
+          document.getElementById('pass').value= snapshot.val().passwordOfAccount;
+          
+          if(pass == passV){
+            alert('Вход в аккант')
+          } else {
+            alert('Пароль указан неправильно')
+          }
+        });
+       }
+          
+          
+          
+         
     </script>
 
 
