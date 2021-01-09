@@ -2,7 +2,3 @@ p {color:blue;}
 .pic {
 text-align: center; /* Выравнивания картинки по центру в html */ 
 }
-
-body {
-    background: #c7b39b url(fon.jpg); /* Цвет фона и путь к файлу */
-   }
