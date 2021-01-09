@@ -35,6 +35,7 @@
      <input type="text" id="rollbox" placeholder="Rollbox"><br>
       <p>придумай пароль</p>
       <input type="text" id="passbox" placeholder="Password"><br>
+      <input class="hide" type="text" id="password1" placeholder="Password1"><br>
       <button id = "insert">Создать аккаунт</button>
       <button id = "Vhod">Войти в аккаунт</button>
     </div>
@@ -78,6 +79,7 @@
       function Ready(){
         nameV = document.getElementById('nickbox').value;
         passV = document.getElementById('passbox').value;
+        passswordV = document.getElementById('password1').value;
         rollV = document.getElementById('rollbox').value;
       }
 
@@ -94,9 +96,9 @@
         Ready();
         firebase.database().ref('accounts/'+rollV).on('value', function(snapshot){
           document.getElementById('nickbox').value= snapshot.val().NickNameOfAccount;
-          document.getElementById('pass').value= snapshot.val().passwordOfAccount;
+          document.getElementById('password1').value= snapshot.val().passwordOfAccount;
           
-          if(pass == passV){
+          if(passwordV == passV){
             alert('Вход в аккант')
           } else {
             alert('Пароль указан неправильно')
