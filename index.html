@@ -14,6 +14,19 @@
   </style>
   </head>
   <body>
+    <div id="preloader">
+      <img src="preloader.gif" alt="preloader">
+    </div>
+    <script>
+      window.onload = function() {
+        let preloader = document.getElementById('preloader');
+       preloader.classList.add('hide-preloader');
+       setTimeout(function() {
+        preloader.classList.add('preloader-hiden');
+       }, 950)
+    }
+    </script>
+
     <div class="pol">
       <p class="blue">Главная страница</p>
       <p>Айди</p>
@@ -39,7 +52,6 @@
     
     
     <script src = "js/content.js"></script>
-
 
   </body>
 </html>
