@@ -30,11 +30,11 @@
     <div class="pol">
       <p class="blue">Главная страница</p>
      <p>Придумай Никнейм</p>
-     <input type="text" id="nickname" placeholder="Nickname"><br>
+     <input type="text" id="nickbox" placeholder="Nickname"><br>
      <p>Rollbox</p>
      <input type="text" id="rollbox" placeholder="Rollbox"><br>
       <p>придумай пароль</p>
-      <input type="text" id="password" placeholder="Password"><br>
+      <input type="text" id="passbox" placeholder="Password"><br>
       <button id = "insert">Создать аккаунт</button>
     </div>
     <style>
@@ -72,11 +72,11 @@
       };
       firebase.initializeApp(firebaseConfig);
 
-      var nameV, passV;
+      var nameV, passV, rollV;
 
       function Ready(){
-        nameV = dicument.getElementById('nickname').value;
-        passV = document.getElementById('password').value;
+        nameV = dicument.getElementById('nickbox').value;
+        passV = document.getElementById('passbox').value;
         rollV = document.getElementById('rollbox').value;
       }
 
