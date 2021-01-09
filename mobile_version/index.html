@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Dvuti</title>
+    <link rel = "stylesheet" href = "css/style.css">
+    <link rel="shortcut icon" href="/images/image.png" type="image/png">
+    <style>
+   body {
+    background: url(fon.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+   }
+  </style>
+  </head>
+  <body style = "background-attachment: fixed;" topmaring = "0">
+    <div id="preloader">
+      <img src="preloader.gif" alt="preloader">
+    </div>
+    <script>
+      window.onload = function() {
+        let preloader = document.getElementById('preloader');
+       preloader.classList.add('hide-preloader');
+       setTimeout(function() {
+        preloader.classList.add('preloader-hiden');
+       }, 950)
+    }
+    </script>
+
+    <div class="pol" align="center">
+      <p class="big">Главная страница</p>
+      <p class="big">Айди</p>
+     <input class="big" type="text" id="id" placeholder="Id"><br>
+     <p class="big">Придумай Никнейм</p>
+     <input class="big"type="text" id="nickname" placeholder="Nickname"><br>
+      <p class="big">придумай пароль</p>
+      <input class="big" type="text" id="password" placeholder="Password"><br>
+      <button class="big" id = "addbutton">Создать аккаунт</button>
+    </div>
+    <style>
+      .pol {
+        margin-left: auto;
+        margin-right: auto
+        width: 30px;
+        height: 615px;
+        background: #ffffff;
+        padding: 5px;
+        border-radius: 10px
+      }
+    </style>
+    <p class="pic">
+     <a href="//freekassa.ru/"><img src="//www.free-kassa.ru/img/fk_btn/4.png" title="Приём оплаты на сайте картами" class="immage-down_centre" alt="pic"></a>
+    </p>
+    
+    
+    <script src = "js/content.js"></script>
+  </body>
+</html>
