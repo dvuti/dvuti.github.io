@@ -1,6 +1,4 @@
 p {color:blue;}
-.image {
-  wigth: 350px;
-  height: 250px;
-  border: 1px solid gray;
+.pic {
+text-align: center; /* Выравнивания картинки по центру в html */ 
 }
