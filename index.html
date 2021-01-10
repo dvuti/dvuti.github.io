@@ -38,7 +38,9 @@
       <input type="text" id="passbox" placeholder="Password"><br>
       <input class="hide" type="text" id="password1" placeholder="Password1"><br>
       <button id = "insert">Создать аккаунт</button>
-      <button href = "https://dvuti.github.io/vhod/">Войти в аккаунт</button>
+      <form action="https://dvuti.github.io/vhod">
+      <button type="submit">Вход в аккаунт</button>
+    </form>
     </div>
     <style>
       .pol {
@@ -91,13 +93,7 @@
           NicknameOfAccount: nameV,
           passwordOfAccount: passV,
           NamberOfAccount: rollV
-        });
-      }
-      document.getElementById('Vhod').onclick = function(){
-        Ready();
-        firebase.database().ref('accounts/'+rollV).on('value', function(snapshot){
-          document.getElementById('passbox').value= snapshot.val().passwordOfAccount;
-          document.getElementById('password1').value= snapshot.val().passwordOfAccount;
+          alert("Вы создали аккаунт");
         });
       }
       
