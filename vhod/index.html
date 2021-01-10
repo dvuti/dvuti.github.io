@@ -4,21 +4,12 @@
 	<title>Document</title>
 </head>
 <body>
-	<input type="text" placeholder="the enter">
-	<button>Send</button>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>
-		var enter=$('input');
-		var send=$('button').click(function() {
-			var enter_val=enter.val();
-			console_log(enter_val);
-		});;
-		if (enter_val!==null || enter_val==Number()) {
-			alert('sent!!!');
-		}
-		else {
-			alert('sorry');
-		}
-	</script>
+	<input id="button" type="submit" name="button" onclick="myFunction();" value="enter"/>
+
+<script>
+function myFunction(){
+    alert("You button was pressed");
+};   
+</script>
 </body>
 </html>
