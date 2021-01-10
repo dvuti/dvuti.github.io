@@ -54,12 +54,12 @@ function check(){
 
 
       document.getElementById('Vhod').onclick = function(){
-        Ready();
-	check();
-        firebase.database().ref('accounts/'+rollV).on('value', function(snapshot){
-          document.getElementById('p1').value= snapshot.val().passwordOfAccount;
-          document.getElementById('p2').value= snapshot.val().passwordOfAccount;
-        });
+	      Ready();
+	      firebase.database().ref('accounts/'+rollV).on('value', function(snapshot){
+		      document.getElementById('p1').value= snapshot.val().passwordOfAccount;
+		      document.getElementById('p2').value= snapshot.val().passwordOfAccount;
+	      });
+	      check();
       }
       
          
