@@ -2,8 +2,9 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
           alert("Вы используете мобильное устройство (телефон или планшет).")
           document.location.href = "https://dvuti.github.io/mobile_version";
-        }
-         else alert("Вы используете ПК.")
+} else {
+          alert("Вы используете ПК.")
+}
 
 
       function check(){
