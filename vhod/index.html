@@ -13,25 +13,16 @@
 	<div class="error"></div>
 
 	<input type="submit" value="submit" id="submit">
+<input type = "password" id = "p1"></br>
+<input type = "password" id = "p2"></br>
+<button onClick = "check()">Проверить</button>
 <script>
-$(".cor_password").on("keyup", function() { // Выполняем скрипт при изменении содержимого 2-го поля
-	
-		var value_input1 = $(".password").val(); // Получаем содержимое 1-го поля
-		var value_input2 = $(this).val(); // Получаем содержимое 2-го поля
-		
-		if(value_input1 != value_input2) { // Условие, если поля не совпадают
-		
-			$(".error").html("Пароли не совпадают!"); // Выводим сообщение
-			$("#submit").attr("disabled", "disabled"); // Запрещаем отправку формы
-			
-		} else { // Условие, если поля совпадают
-		
-			$("#submit").removeAttr("disabled");  // Разрешаем отправку формы
-			$(".error").html(""); // Скрываем сообщение
-			
-		}
-		
-	});
+function check(){
+    if(document.getElementById('p1') == document.getElementById('p2')) 
+        alert('Пароли верны');
+    else 
+        alert('Пароли неверны');
+    }
 </script>
 	
 	<button>Нажмите на меня</button>
