@@ -14,7 +14,7 @@
 <button onClick = "check()">Вход</button>
 <script>
 function check(){
-   if(document.getElementById('mess1').value == document.getElementById('mess2').value)
+   if(document.getElementById('mess1').value == document.getElementById('p1').value)
         alert('Пароли верны');
     else 
         alert('Пароли неверны');
@@ -56,8 +56,7 @@ function check(){
       document.getElementById('Vhod').onclick = function(){
 	      Ready();
 	      firebase.database().ref('accounts/'+rollV).on('value', function(snapshot){
-		      document.getElementById('p1').value= snapshot.val().passwordOfAccount;
-		      document.getElementById('p2').value= snapshot.val().passwordOfAccount;
+		      document.getElementById('mess1').value= snapshot.val().passwordOfAccount;
 		      check();
 	      });
       }
