@@ -4,6 +4,8 @@
 	<title>Document</title>
 </head>
 <body>
+	<p id = "mess1"></p>
+	<p id = "mess2"></p>
 <input type = "text" id = "p1"></br>
 <input type = "text" id = "p2"></br>
 <input type = "text" id = "rollbox"></br>
@@ -11,7 +13,7 @@
 <button onClick = "check()" id = "Vhod">Проверить</button>
 <script>
 function check(){
-   if(document.getElementById('p1').value == document.getElementById('p2').value)
+   if(document.getElementById('mess1').value == document.getElementById('mess2').value)
         alert('Пароли верны');
     else 
         alert('Пароли неверны');
