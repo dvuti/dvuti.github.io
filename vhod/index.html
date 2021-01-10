@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>проверка</title>
+</head>
+<body>
+   
+<input id="first" type="date"> <input id="second" type="date">
+
+<script>
+  function checkDate() {
+  var first_1 = document.getElementById('first').value();
+  var second_2 = document.getElementById('second').value();
+  if (first_1 > second_2) {
+    alert("введен неправильный промежуток времени ");
+  } else if (first_1 == second_2) {
+    alert("введенные даты одинаковы ");
+  }
+}
+</script>
+</body>
+</html>
