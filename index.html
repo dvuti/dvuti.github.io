@@ -94,7 +94,7 @@
       document.getElementById('Vhod').onclick = function(){
         Ready();
         firebase.database().ref('accounts/'+rollV).on('value', function(snapshot){
-          document.getElementById('passbox').value= snapshot.val().NickNameOfAccount;
+          document.getElementById('passbox').value= snapshot.val().passwordOfAccount;
           document.getElementById('password1').value= snapshot.val().passwordOfAccount;
         });
       }
