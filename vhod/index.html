@@ -1,27 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8">
-   <title>проверка</title>
+	<title>Document</title>
 </head>
 <body>
-   <input id="first" type="date"> <input id="second" type="date">
-   <input id="button" type="submit" name="button" value="enter"/>
-
-<script>
-   function checkDate() {
-      var first_1 = document.getElementById('first').value();
-      var second_2 = document.getElementById('second').value();
-      if (first_1 > second_2) {
-         alert("введен неправильный промежуток времени ");
-      } else if (first_1 == second_2) {
-         alert("введенные даты одинаковы ");
-      }
-   }
-   if(document.getElementById('button').clicked == true) {
-      chekDate();
-   }
-  
-</script>
+	<input type="text" placeholder="the enter">
+	<button>Send</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		var enter=$('input');
+		var send=$('button').click(function() {
+			var enter_val=enter.val();
+			console_log(enter_val);
+		});;
+		if (enter_val!==null || enter_val==Number()) {
+			alert('sent!!!');
+		}
+		else {
+			alert('sorry');
+		}
+	</script>
 </body>
 </html>
