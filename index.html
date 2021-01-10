@@ -50,13 +50,12 @@
       }
     </style>
     <script>
-      function check(){
-          if(document.getElementById('passbox').value == document.getElementById('Password1').value){
-                    alert('Пароли верны');
-          } else {
-                    alert('Пароли неверны');
-          }
-}
+function check(){
+   if(document.getElementById('passbox').value == document.getElementById('password1').value)
+        alert('Пароли верны');
+    else 
+        alert('Пароли неверны');
+    }
     </script>
     
     <p class="pic">
@@ -85,7 +84,7 @@
       };
       firebase.initializeApp(firebaseConfig);
 
-      var nameV, passV, rollV, password;
+      var nameV, passV, rollV, passwordV;
 
       function Ready(){
         nameV = document.getElementById('nickbox').value;
