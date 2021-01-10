@@ -37,7 +37,7 @@
       <input type="text" id="passbox" placeholder="Password"><br>
       <input class="hide" type="text" id="password1" placeholder="Password1"><br>
       <button id = "insert">Создать аккаунт</button>
-      <button id = "Vhod">Войти в аккаунт</button>
+      <button id = "Vhod" onClick = "check()">Войти в аккаунт</button>
     </div>
     <style>
       .pol {
@@ -91,28 +91,20 @@
           NamberOfAccount: rollV
         });
       }
-      
-       document.getElementById('Vhod').onclick = function(){
+      document.getElementById('Vhod').onclick = function(){
         Ready();
         firebase.database().ref('accounts/'+rollV).on('value', function(snapshot){
-          document.getElementById('nickbox').value= snapshot.val().NickNameOfAccount;
+          document.getElementById('passbox').value= snapshot.val().NickNameOfAccount;
           document.getElementById('password1').value= snapshot.val().passwordOfAccount;
-          
-          if(passwordV == passV){
-            alert('Вход в аккант')
-          } else {
-            alert('Пароль указан неправильно')
-          }
         });
-       }
-          
-      document.getElementById('Vhod').onclick = function(){
-        if(passwordV == passV){
-          alert('Вход в аккант')
-        } else {
-           alert('Пароль указан неправильно')
-        }
       }
+      
+      function check(){
+         if(document.getElementById('passbox').value == document.getElementById('password1').value)
+              alert('Пароли верны');
+          else 
+              alert('Пароли неверны');
+          }
          
     </script>
 
