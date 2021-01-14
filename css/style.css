@@ -36,7 +36,7 @@ text-align: center; /* Выравнивания картинки по центр
  	}
  }
 
-.butt{
+a.butt{
 
   display: inline-block;
 
@@ -60,6 +60,6 @@ text-align: center; /* Выравнивания картинки по центр
 
 } 
 
-.butt:hover { background: rgba(255,255,255,.2); }
+a.butt:hover { background: rgba(255,255,255,.2); }
 
-.butt:active { background: white; } 
+a.butt:active { background: white; } 
