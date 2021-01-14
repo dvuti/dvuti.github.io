@@ -36,7 +36,7 @@ text-align: center; /* Выравнивания картинки по центр
  	}
  }
 
-butt{
+.butt{
 
   display: inline-block;
 
@@ -60,6 +60,6 @@ butt{
 
 } 
 
-butt:hover { background: rgba(255,255,255,.2); }
+.butt:hover { background: rgba(255,255,255,.2); }
 
 butt:active { background: black; } 
