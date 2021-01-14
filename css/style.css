@@ -40,7 +40,7 @@ a.butt{
 
   display: inline-block;
 
-  color: white;
+  color: black;
 
   font-weight: 700;
 
@@ -62,4 +62,4 @@ a.butt{
 
 a.butt:hover { background: rgba(255,255,255,.2); }
 
-a.butt:active { background: white; } 
+a.butt:active { background: black; } 
