@@ -40,7 +40,7 @@ text-align: center; /* Выравнивания картинки по центр
 
   display: inline-block;
 
-  color: black;
+  color: white;
 
   font-weight: 700;
 
@@ -62,4 +62,4 @@ text-align: center; /* Выравнивания картинки по центр
 
 .butt:hover { background: rgba(255,255,255,.2); }
 
-butt:active { background: black; } 
+butt:active { background: white; } 
