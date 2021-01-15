@@ -4,13 +4,20 @@
       <title>Кликер</title>
     </head>
     <body>
-      <button onclick = "click()">Кнопка</button>
-      <script>
-        cklicks = 0;
-        fcklick = 1;
-        function clickc() {
-          alert(clicks);
-        }
-      </script>
+<div id="block">0</div>
+<style type="text/css">
+    #block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        background-color: beige;
+        cursor: pointer;
+    }
+</style>
+<script type="text/javascript">
+block.onclick = () => block.innerText++;
+</script>
     </body>
   </html>
