@@ -63,3 +63,17 @@ text-align: center; /* Выравнивания картинки по центр
 .butt:hover { background: rgba(255,255,255,.2); }
 
 butt:active { background: black; } 
+
+
+
+@font-face {
+	font-family: 'Crimson Text';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Crimson Text'),
+		url('ComfortaaBold.ttf') format('ttf'),
+}
+ 
+.white {
+	font-family: 'Crimson Text';
+}
