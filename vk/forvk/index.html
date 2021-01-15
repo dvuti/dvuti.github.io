@@ -55,14 +55,13 @@
       
       function Ready(){
         clicks = document.getElementById('block').value;
-        id = a;
       }
 
       document.getElementById('block').onclick = function(){
         Ready();
         firebase.database().ref('accounts/'+id).set({
           click: clicks,
-          id_chels: id
+          id_chels: a
         });
       }
       </script>
