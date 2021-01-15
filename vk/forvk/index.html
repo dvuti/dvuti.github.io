@@ -50,17 +50,18 @@
       };
       firebase.initializeApp(firebaseConfig);
       
-      var clicks;
+      var clicks, acc;
       
       function Ready(){
         clicks = document.getElementById('block').value;
+        acc = bombaB
       }
 
       document.getElementById('save').onclick = function(){
         Ready();
-        firebase.database().ref('profils/'+bombaB).set({
+        firebase.database().ref('profils/'+acc).set({
           click: clicks,
-          id_chels: bombaB
+          id_chels: acc
         });
       }
       </script>
