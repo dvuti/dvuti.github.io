@@ -50,15 +50,16 @@
       };
       firebase.initializeApp(firebaseConfig);
       
-      var clicks, a;
+      var clicks, aV;
       
       function Ready(){
         clicks = document.getElementById('block').value;
+        aV = a;
       }
 
       document.getElementById('save').onclick = function(){
         Ready();
-        firebase.database().ref('accounts/'+a).set({
+        firebase.database().ref('accounts/'+aV).set({
           click: clicks,
           id_chels: a
         });
