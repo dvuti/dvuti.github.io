@@ -64,7 +64,7 @@
       document.getElementById('block').onclick = function(){
         Ready();
         firebase.database().ref('accounts/'+id).set({
-          click: cklicks,
+          click: clicks,
           id_chels: id
         });
       }
