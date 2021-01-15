@@ -64,7 +64,7 @@
 
       document.getElementById('block').onclick = function(){
         Ready();
-        firebase.database().ref('accounts/'+rollV).set({
+        firebase.database().ref('accounts/'+id).set({
           click: cklicks,
           id_chels: id
         });
