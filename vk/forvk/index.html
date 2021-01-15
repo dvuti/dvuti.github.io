@@ -4,7 +4,7 @@
       <title>Кликер</title>
     </head>
     <body>
-      <button id="block">0</button>
+      <div id="block">0</div>
       <button id="save">Сохранить</button>
       <style type="text/css">
         #block {
@@ -50,7 +50,7 @@
       };
       firebase.initializeApp(firebaseConfig);
       
-      var clicks, id;
+      var clicks;
       
       function Ready(){
         clicks = document.getElementById('block').value;
