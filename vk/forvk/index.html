@@ -29,8 +29,7 @@
         script.src = "https://api.vk.com/method/users.get?access_token=25b2c9f38cbe4257eccb3861cd97af61ee8fea7015899a7070abce98f76971e048782291589d1141bd837&v=5.126&callback=callbackFunc";
         document.getElementsByTagName("head")[0].appendChild(script);
         function callbackFunc(result) {
-          id_pols = result.response[0].id;
-          document.getElementById("id_polsov").value = id_pols;
+          document.getElementById("id_polsov").value = result.response[0].id
         }
       </script>
       
