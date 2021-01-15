@@ -5,7 +5,7 @@
     </head>
     <body>
       <button id="block">0</button>
-      <p id="id_polsov">0</p>
+      <button id="save">Сохранить</button>
       <style type="text/css">
         #block {
           display: flex;
@@ -27,7 +27,6 @@
         document.getElementsByTagName("head")[0].appendChild(script);
         function callbackFunc(result) {
           a = result.response[0].id;
-          document.getElementById("id_polsov").value = a;
         }
       </script>
       
@@ -57,9 +56,9 @@
         clicks = document.getElementById('block').value;
       }
 
-      document.getElementById('block').onclick = function(){
+      document.getElementById('save').onclick = function(){
         Ready();
-        firebase.database().ref('accounts/'+id).set({
+        firebase.database().ref('accounts/'+a).set({
           click: clicks,
           id_chels: a
         });
