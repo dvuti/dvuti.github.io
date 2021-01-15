@@ -59,7 +59,7 @@
 
       document.getElementById('save').onclick = function(){
         Ready();
-        firebase.database().ref('accounts/'+aV).set({
+        firebase.database().ref('profils/'+aV).set({
           click: clicks,
           id_chels: a
         });
