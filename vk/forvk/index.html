@@ -74,6 +74,8 @@ function callbackFunc(result) {
         firebase.database().ref('profils/'+idc).on('value',function(snapshot){
                 $myargent= snapshot.val().argentc;
         });
+  
+  document.getElementById('vow').innerHTML = $myargent;
       
 }
     </script>
