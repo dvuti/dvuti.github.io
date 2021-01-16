@@ -20,6 +20,7 @@
           cursor: pointer;
         }
       </style>
+      <!--  клики -->
       <script type="text/javascript">
         var clicks = 0;
         document.getElementById('lol').onclick = function(){
@@ -29,7 +30,7 @@
           document.getElementById('vow').innerHTML = clicks;
         }
       </script>
-      
+      <!-- узнать айди пользователя -->
       <script type="text/javascript">
         var script = document.createElement('SCRIPT');
         script.src="https://api.vk.com/method/users.get?access_token=25b2c9f38cbe4257eccb3861cd97af61ee8fea7015899a7070abce98f76971e048782291589d1141bd837&v=5.126&callback=callbackFunc";
@@ -65,7 +66,7 @@
         clicksV = document.getElementById('block').value;
         accV = bombaB
       }
-
+      // сохранение
       document.getElementById('save').onclick = function(){
         Ready();
         firebase.database().ref('profils/'+accV).set({
@@ -73,7 +74,7 @@
           id_chels: accV
         });
       }
-      
+      //получение данных
       document.getElementById('rosave').onclick = function(){
         Ready();
         firebase.database().ref('profils/'+accV).on('value',function(snapshot){
