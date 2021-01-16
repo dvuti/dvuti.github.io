@@ -4,7 +4,11 @@
       <title>Кликер</title>
     </head>
     <body>
-	    <div class="pol"></div>
+	    <div class="pol">
+		    <button id='lol'>Жми</button>
+		    <p>Баланс: <span id = vow></span> монет</p>
+		    <img src="basket.png" class="block" width="64px" height="64px">
+	    </div>
 	    	    <div id="preloader">
       <img src="https://i.pinimg.com/originals/08/7f/5d/087f5d2ffaf77dec5696b81ca52c63de.gif" alt="preloader">
       </div>
@@ -45,12 +49,7 @@
        }, 1500)
     }
     </script>
-	    
 
-	    
-
-      <button id='lol'>Жми</button>
-      <p>Баланс: <span id = vow></span> монет</p>
       <style type="text/css">
         #lol {
           display: flex;
@@ -126,7 +125,7 @@ function callbackFunc(result) {
 
       <script src="vkBridge.js"></script>
       <script>vkBridge.send('VKWebAppInit');</script>
-	<img src="basket.png" class="block" width="64px" height="64px">
+	
 	    <style>
 .block{
 
