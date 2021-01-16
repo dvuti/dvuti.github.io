@@ -6,8 +6,9 @@
     <body>
       <button id='lol'>Жми</button>
       <input id="block">0</input>
-      <p id='"vow'>0</p>
+      <p id='"vow'></p>
       <button id="save">Сохранить</button>
+      <button id="rosave">Открыть последнее сохранение</button>
       <style type="text/css">
         #lol {
           display: flex;
@@ -70,6 +71,13 @@
         firebase.database().ref('profils/'+accV).set({
           click: clicksV,
           id_chels: accV
+        });
+      }
+      
+      document.getElementById('rosave').onclick = function(){
+        Ready();
+        firebase.database().ref('profils/'+accV).on(value, function(snapshot{
+          document.getElementById('block').value= snapshot.val().click;
         });
       }
       </script>
