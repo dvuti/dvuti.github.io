@@ -31,7 +31,7 @@
       <script type="text/javascript">
         var clicks = 0;
         document.getElementById('lol').onclick = function(){
-          clicks = clicks + 1, // ранее полученная высота
+          clicks = clicks + 1,
               input = document.getElementById('block'); // целевой тег <input>
           block.value = clicks;
           document.getElementById('vow').innerHTML = clicks;
@@ -88,12 +88,6 @@
           document.getElementById('block').value= snapshot.val().click;
           document.getElementById('vow').value= snapshot.val().click;
         });
-        function func() {
-          console.log('start');
-          wait(5000); // 1000ms = 1s
-        }
-        func();
-        console.log('end');
         pToInput();
       }
       </script>
