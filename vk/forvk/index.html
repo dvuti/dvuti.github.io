@@ -124,5 +124,16 @@ function callbackFunc(result) {
     </script>
       <script src="vkBridge.js"></script>
       <script>vkBridge.send('VKWebAppInit');</script>
+	    
+	    <script>
+		    import bridge from '@vkontakte/vk-bridge';
+
+bridge.send('VKWebAppInit', {});
+
+// чтобы ловить события в консоль:
+bridge.subscribe((e) => {
+  console.log('bridge event', e);
+});
+	    </script>
     </body>
   </html>
