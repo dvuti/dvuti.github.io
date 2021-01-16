@@ -6,6 +6,15 @@
     <body>
       
       <img src="https://cdn.dribbble.com/users/1373613/screenshots/5627768/___-1.gif" alt="preloader">
+          <script>
+      window.onload = function() {
+        let preloader = document.getElementById('preloader');
+       preloader.classList.add('hide-preloader');
+       setTimeout(function() {
+        preloader.classList.add('preloader-hiden');
+       }, 950)
+    }
+    </script>
       <button id='lol'>Жми</button>
       <p>Баланс: <span id = vow></span> монет</p>
       <style type="text/css">
