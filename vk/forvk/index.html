@@ -5,7 +5,8 @@
     </head>
     <body>
       <button id='lol'>Жми</button>
-      <input id="block"></input>
+      <input id="block">0</input>
+      <p id='"vow'>0</p>
       <button id="save">Сохранить</button>
       <style type="text/css">
         #lol {
@@ -24,6 +25,8 @@
           clicks = clicks + 1, // ранее полученная высота
               input = document.getElementById('block'); // целевой тег <input>
           block.value = clicks;
+              p = document.getElementById('vow'); // целевой тег <input>
+          vow.value = clicks;
         }
       </script>
       
