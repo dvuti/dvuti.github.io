@@ -65,7 +65,7 @@
       document.getElementById('save').onclick = function(){
         firebase.database().ref('profils/'+idc).set({
           click: clicks,
-          id_chels: accV
+          id_chels: idc
         });
       }
       //получение данных
