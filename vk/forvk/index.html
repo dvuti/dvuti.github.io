@@ -61,10 +61,8 @@
       };
       firebase.initializeApp(firebaseConfig);
 
-      }
       // сохранение
       document.getElementById('save').onclick = function(){
-        Ready();
         firebase.database().ref('profils/'+accV).set({
           click: clicks,
           id_chels: accV
