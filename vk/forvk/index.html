@@ -7,7 +7,7 @@
 	    <div>
 		    <button id='lol'>Жми</button>
 		    <p>Баланс: <span id = vow></span> монет</p>
-		    <img src="basket.png" class="block" width="64px" height="64px">
+		    <img src="basket.png" class="straightLine" width="64px" height="64px">
 	    </div>
 	    	    <div id="preloader">
       <img src="https://i.pinimg.com/originals/08/7f/5d/087f5d2ffaf77dec5696b81ca52c63de.gif" alt="preloader">
@@ -138,6 +138,17 @@ top: 450px;
 		      background: #ffffff;
 		      justify-content: center;
 		      align-items: center;
+
+@keyframes straightLine {
+  50% {
+    transform: translate3D(100px, -100px, 0);
+  }
+}
+ 
+.dot {
+  animation: straightLine 5s infinite linear;
+}
+		      
 	    </style>
     </body>
   </html>
