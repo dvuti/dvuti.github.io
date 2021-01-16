@@ -70,7 +70,6 @@
       }
       //получение данных
       document.getElementById('rosave').onclick = function(){
-        Ready();
         firebase.database().ref('profils/'+accV).on('value',function(snapshot){
           clicks= snapshot.val().click;
 
