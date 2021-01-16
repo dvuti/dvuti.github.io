@@ -56,19 +56,18 @@ firebase.initializeApp(firebaseConfig);
     <script>
 
 // сохранение
-document.getElementById('save').onclick = function(){
-        firebase.database().ref('profils/'+idc).set({
+      
+      var $myargent = 0;
+document.getElementById('lol').onclick = function(){
+        $myargent = $myargent + 1,
+        document.getElementById('vow').innerHTML = $myargent;
+  firebase.database().ref('profils/'+idc).set({
                 argentc: $myargent,
                 id_chels: idc
         });
 }
-//получение данных
-document.getElementById('rosave').onclick = function(){
-        firebase.database().ref('profils/'+idc).on('value',function(snapshot){
-                $myargent= snapshot.val().argentc;
-        });
-}
-      
+
+//получение данныx
 var script = document.createElement('SCRIPT');
 script.src="https://api.vk.com/method/users.get?access_token=25b2c9f38cbe4257eccb3861cd97af61ee8fea7015899a7070abce98f76971e048782291589d1141bd837&v=5.126&callback=callbackFunc";
 document.getElementsByTagName("head")[0].appendChild(script);
