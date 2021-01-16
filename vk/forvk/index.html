@@ -5,10 +5,9 @@
     </head>
     <body>
       <button id='lol'>Жми</button>
-      <input id="block" type="hidden"></input>
       <p>Баланс: <span id = vow></span> монет</p>
       <button id="save">Сохранить</button>
-      <button id="rosave" onclick="this.style.display='none'">Открыть последнее сохранение</button>
+      <button id="rosave">Открыть последнее сохранение</button>
       <style type="text/css">
         #lol {
           display: flex;
@@ -22,12 +21,10 @@
       </style>
     
     <script>
+      var $myargent
 document.getElementById('lol').onclick = function(){
-  let clicks;
-        clicks = clicks + 1,
-                input = document.getElementById('block'); // целевой тег <input>
-        block.value = clicks;
-        document.getElementById('vow').innerHTML = clicks;
+        $mymons = $mymons + 1,
+        document.getElementById('vow').innerHTML = $myargent;
 }
       </script>
   <script>
@@ -61,15 +58,14 @@ firebase.initializeApp(firebaseConfig);
 // сохранение
 document.getElementById('save').onclick = function(){
         firebase.database().ref('profils/'+idc).set({
-                click: clicks,
+                click: $myargent,
                 id_chels: idc
         });
 }
 //получение данных
 document.getElementById('rosave').onclick = function(){
-  let clicks;
         firebase.database().ref('profils/'+idc).on('value',function(snapshot){
-                clicks= snapshot.val().click;
+                $myargent= snapshot.val().argentc;
         });
 }
     </script>
