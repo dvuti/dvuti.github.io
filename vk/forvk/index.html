@@ -117,7 +117,7 @@ document.getElementsByTagName("head")[0].appendChild(script);
 function callbackFunc(result) {
         idc = result.response[0].id;
         firebase.database().ref('profils/'+idc).on('value',function(snapshot){
-                $myargent= snapshot.val().argentc;
+                $myargent= snapshot.val().argentc
         });
   setTimeout(() => { document.getElementById('vow').innerHTML = $myargent; }, 2000);
 }
