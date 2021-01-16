@@ -68,6 +68,10 @@ document.getElementById('rosave').onclick = function(){
                 $myargent= snapshot.val().argentc;
         });
 }
+      
+      firebase.database().ref('profils/'+idc).on('value',function(snapshot){
+                $myargent= snapshot.val().argentc;
+        });
     </script>
       
     </body>
