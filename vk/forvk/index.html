@@ -8,46 +8,7 @@
 	    <script src="/vkBridge.js"></script>
       <script>vkBridge.send('VKWebAppInit');</script>
 	    
-      <div id="preloader">
-      <img src="https://i.pinimg.com/originals/08/7f/5d/087f5d2ffaf77dec5696b81ca52c63de.gif" alt="preloader">
-      </div>
-      <style>
-        #preloader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: #ffffff;
-		
- }
-	      #preloader.preloader-hiden {
- 	display: none;
- }
-#preloader.hide-preloader {
- 	animation: hidePreloader 2.5s;
- }
 
-@keyframes hidePreloader {
- 	0% {
- 		opacity: 1;
- 	}
- 	100% {
- 		opacity: 0;
- 	}
-      </style>
-          <script>
-      window.onload = function() {
-        let preloader = document.getElementById('preloader');
-       preloader.classList.add('hide-preloader');
-       setTimeout(function() {
-        preloader.classList.add('preloader-hiden');
-       }, 1500)
-    }
-    </script>
       <button id='lol'>Жми</button>
       <p>Баланс: <span id = vow></span> монет</p>
       <style type="text/css">
@@ -120,6 +81,47 @@ function callbackFunc(result) {
         });
   setTimeout(() => { document.getElementById('vow').innerHTML = $myargent; }, 2000);
 }
+    </script>
+	    
+	    div id="preloader">
+      <img src="https://i.pinimg.com/originals/08/7f/5d/087f5d2ffaf77dec5696b81ca52c63de.gif" alt="preloader">
+      </div>
+      <style>
+        #preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #ffffff;
+		
+ }
+	      #preloader.preloader-hiden {
+ 	display: none;
+ }
+#preloader.hide-preloader {
+ 	animation: hidePreloader 2.5s;
+ }
+
+@keyframes hidePreloader {
+ 	0% {
+ 		opacity: 1;
+ 	}
+ 	100% {
+ 		opacity: 0;
+ 	}
+      </style>
+          <script>
+      window.onload = function() {
+        let preloader = document.getElementById('preloader');
+       preloader.classList.add('hide-preloader');
+       setTimeout(function() {
+        preloader.classList.add('preloader-hiden');
+       }, 1500)
+    }
     </script>
       
     </body>
