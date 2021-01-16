@@ -114,7 +114,7 @@ function callbackFunc(result) {
         firebase.database().ref('profils/'+idc).on('value',function(snapshot){
                 $myargent= snapshot.val().argentc;
         });
-  setTimeout(() => { document.getElementById('vow').innerHTML = $myargent; }, 1500);
+  setTimeout(() => { document.getElementById('vow').innerHTML = $myargent; }, 2000);
 }
     </script>
       
