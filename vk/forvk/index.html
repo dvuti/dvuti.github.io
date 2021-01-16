@@ -77,7 +77,7 @@
       document.getElementById('save').onclick = function(){
         Ready();
         firebase.database().ref('profils/'+accV).set({
-          click: clicksV,
+          click: clicks,
           id_chels: accV
         });
       }
