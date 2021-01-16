@@ -67,6 +67,7 @@ document.getElementById('save').onclick = function(){
 }
 //получение данных
 document.getElementById('rosave').onclick = function(){
+  let clicks;
         firebase.database().ref('profils/'+idc).on('value',function(snapshot){
                 clicks= snapshot.val().click;
         });
