@@ -7,7 +7,7 @@
 	    <div>
 		    <button id='lol'>Жми</button>
 		    <p>Баланс: <span id = vow></span> монет</p>
-		    <img src="basket.png" class="block" width="64px" height="64px">
+		    <img src="basket.png" class="go-left-right" width="64px" height="64px">
 	    </div>
 	    	    <div id="preloader">
       <img src="https://i.pinimg.com/originals/08/7f/5d/087f5d2ffaf77dec5696b81ca52c63de.gif" alt="preloader">
@@ -127,28 +127,39 @@ function callbackFunc(result) {
       <script>vkBridge.send('VKWebAppInit');</script>
 	
 	    <style>
-		    		    @keyframes block {
-			    0% {
-				    opasity: 1;
-			    }
-			      100% {
-position: relative;
-left: 130px;
-top: 450px;
-}
-					    .pol {
-			      width: 360px;
-			      height: 700px;
-			      background: #ffffff;
-			      justify-content: center;
-			      align-items: center;
-					    }
+		    @keyframes go-left-right {   /* назовём анимацию: "go-left-right" */
+    from {
+      left: 0px;               /* от: left: 0px */
+    }
+    to {
+      left: calc(100% - 50px); /* до: left: 100%-50px */
+    }
+  }
 
+  /* Префикс для Chrome, Opera, Safari */
+  @-webkit-keyframes go-left-right {
+    from {
+      left: 0px;
+    }
+    to {
+      left: calc(100% - 50px);
+    }
+  }
 
- 
-#block {
-  animation: block 5s;
-}
+  .progress {
+    /* применить анимацию go-left-right */
+    /* продолжительность 3s */
+    /* количество раз: бесконечное (infinite) */
+    /* менять направление анимации каждый раз (alternate) */
+    animation: go-left-right 3s infinite alternate;
+    -webkit-animation: go-left-right 3s infinite alternate;
+
+    position: relative;
+    border: 2px solid green;
+    width: 50px;
+    height: 20px;
+    background: lime;
+  }
 		      
 	    </style>
     </body>
