@@ -19,7 +19,11 @@
         }
       </style>
       <script type="text/javascript">
-        lol.onclick = () => block.innerText++;
+        document.getElementById('lol').onclick = function(){
+          var click = click + 1, // ранее полученная высота
+              input = document.getElementById('block'); // целевой тег <input>
+          block.value = click;
+        }
       </script>
       
       <script type="text/javascript">
