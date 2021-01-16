@@ -18,6 +18,21 @@
 	justify-content: center;
 	align-items: center;
 	background: #101010;
+		#preloader.preloader-hiden {
+ 	display: none;
+ }
+#preloader.hide-preloader {
+ 	animation: hidePreloader 1s;
+ }
+
+@keyframes hidePreloader {
+ 	0% {
+ 		opacity: 1;
+ 	}
+ 	100% {
+ 		opacity: 0;
+ 	}
+ }
       </style>
           <script>
       window.onload = function() {
