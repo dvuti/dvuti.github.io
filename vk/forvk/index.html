@@ -76,7 +76,7 @@
       
       document.getElementById('rosave').onclick = function(){
         Ready();
-        firebase.database().ref('profils/'+accV).on(value, function(snapshot){
+        firebase.database().ref('profils/'+accV).on('value',function(snapshot){
           document.getElementById('block').value= snapshot.val().click;
         });
       }
