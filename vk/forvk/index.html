@@ -74,13 +74,7 @@ function callbackFunc(result) {
         firebase.database().ref('profils/'+idc).on('value',function(snapshot){
                 $myargent= snapshot.val().argentc;
         });
-      (async () => {
-  const res = await fetch(`https://dvuti-7ede1-default-rtdb.firebaseio.com`);
-  const json = await res.json();
-  console.log(json.public_repos);
-  console.log("Hello!");
-})();
-}
+setTimeout(() => { document.getElementById('vow').innerHTML = $myargent; }, 2000);
     </script>
       
     </body>
