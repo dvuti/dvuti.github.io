@@ -88,7 +88,12 @@
           document.getElementById('block').value= snapshot.val().click;
           document.getElementById('vow').value= snapshot.val().click;
         });
-        setTimeout(1000);
+        function func() {
+          console.log('start');
+          wait(5000); // 1000ms = 1s
+        }
+        func();
+        console.log('end');
         pToInput();
       }
       </script>
