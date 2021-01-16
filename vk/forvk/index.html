@@ -20,6 +20,13 @@
           cursor: pointer;
         }
       </style>
+    
+    <script>
+      function pToInput(){
+        clicks = block.value;
+        document.getElementById('vow').innerHTML = clicks;
+      }
+    </script>
       <!--  клики -->
       <script type="text/javascript">
         var clicks = 0;
@@ -81,6 +88,7 @@
           document.getElementById('block').value= snapshot.val().click;
           document.getElementById('vow').value= snapshot.val().click;
         });
+        pToInput();
       }
       </script>
     </body>
