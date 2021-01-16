@@ -58,7 +58,7 @@ firebase.initializeApp(firebaseConfig);
 // сохранение
 document.getElementById('save').onclick = function(){
         firebase.database().ref('profils/'+idc).set({
-                click: $myargent,
+                argentc: $myargent,
                 id_chels: idc
         });
 }
